@@ -1,0 +1,25 @@
+# 💻 Virtual Environment
+.venv/
+env/
+venv/
+
+# 🐍 Python cache files
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# 📦 Streamlit & logs
+.streamlit/cache/
+*.log
+*.tmp
+
+# 🧠 Machine learning model files (optional)
+*.pkl
+
+# 📄 Datasets (optional)
+*.csv
+
+# 🧠 VS Code and system files
+.vscode/
+.DS_Store
+Thumbs.db

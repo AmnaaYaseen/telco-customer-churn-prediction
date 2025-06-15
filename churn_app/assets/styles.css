@@ -1,0 +1,66 @@
+/* 🔷 App background */
+[data-testid="stAppViewContainer"] {
+    background-image: url("data:image/png;base64,{{BG_IMAGE}}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+[data-testid="stAppViewContainer"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(7px);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+[data-testid="stVerticalBlock"] > div {
+    position: relative;
+    z-index: 1;
+    color: white !important;
+}
+
+/* 🔷 Banner style */
+.custom-banner {
+    background-color: #181c30;
+    padding: 1.2rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* 🔷 Navigation button container */
+.nav-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 🔘 Global button style */
+div.stButton > button {
+    background-color: #181c30 !important;
+    color: white !important;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+div.stButton > button:hover {
+    background-color: #1c1f36 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
