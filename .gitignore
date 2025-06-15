@@ -13,12 +13,6 @@ __pycache__/
 *.log
 *.tmp
 
-# 🧠 Machine learning model files (optional)
-*.pkl
-
-# 📄 Datasets (optional)
-*.csv
-
 # 🧠 VS Code and system files
 .vscode/
 .DS_Store
