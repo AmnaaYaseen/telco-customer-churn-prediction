@@ -59,15 +59,16 @@ Follow these steps to run the project locally:
 # Step 1: Clone the repository
 git clone https://github.com/AmnaaYaseen/telco-customer-churn-prediction.git
 
-# Step 2: Navigate to the project directory
-cd telco_customer_churn_prediction/churn_app
+# Step 2: Navigate to the root project directory
+cd telco_customer_churn_prediction
 
-# Step 3 (Optional): Create a virtual environment
+# Step 3 (Optional but recommended): Create a virtual environment
 python -m venv .venv
-.venv\Scripts\activate  # On Windows
+.venv\Scripts\activate  # For Windows users
 
-# Step 4: Install required packages
-pip install -r ../requirements.txt
+# Step 4: Install all required dependencies
+pip install -r requirements.txt
 
-# Step 5: Launch the Streamlit app
+# Step 5: Run the Streamlit app
+cd churn_app
 streamlit run app.py
