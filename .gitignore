@@ -17,3 +17,8 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# 🚫 Ignore data and models inside churn_app
+churn_app/data/
+churn_app/models/
+churn_app/models_train_all_features.pkl
