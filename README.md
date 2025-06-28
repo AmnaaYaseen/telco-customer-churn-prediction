@@ -11,9 +11,9 @@ A complete machine learning pipeline to predict customer churn in the telecom in
 ## 🎬 Demo
 
 Watch a 2-minute walkthrough of the project in action:  
-[![Telco Churn Prediction Demo](https://img.youtube.com/vi/2VUMmAisBwk/0.jpg)](https://youtu.be/2VUMmAisBwk)
+[![Telco Churn Prediction Demo](https://img.youtube.com/vi/-znVog3LSi8/0.jpg)](https://youtu.be/-znVog3LSi8)
 
-> 📌 *Click the thumbnail or [this link](https://youtu.be/2VUMmAisBwk) to watch the demo.*
+> 📌 *Click the thumbnail or [this link](https://youtu.be/-znVog3LSi8) to watch the demo.*
 
 ---
 
