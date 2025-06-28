@@ -35,6 +35,26 @@ Custom thresholding (set to 0.3) was applied to improve recall and identify more
 
 ---
 
+## 🔁 Model Retraining Strategy
+
+To enhance generalization and reduce complexity, a two-stage training pipeline was adopted:
+
+1. **Initial Training on All Features**  
+   The three models — Logistic Regression, Random Forest, and XGBoost — were first trained using all preprocessed features.
+
+2. **Feature Importance Extraction**  
+   SHAP and built-in feature importance scores were used to identify the top 10 most impactful features for churn prediction.
+
+3. **Retraining on Top Features**  
+   The same models were retrained using only the top 10 features to improve performance and reduce overfitting.
+
+4. **SMOTE for Class Imbalance**  
+   Synthetic Minority Over-sampling Technique (SMOTE) was applied to handle the imbalance in churn vs. non-churn classes during training.
+
+> ✅ The final model used for deployment (Random Forest) was trained on the **top 10 features** and with **SMOTE-applied balanced data**, providing better recall for churn detection.
+
+---
+
 ## 📊 Key Features
 
 - 🔍 **Interactive EDA** with histograms, pie charts, violin plots, and comparison by churn  
