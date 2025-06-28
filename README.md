@@ -1,74 +1,143 @@
 # 📉 Telco Customer Churn Prediction
 
-This is a machine learning project developed as part of the **Data Mining and Machine Learning** course. It aims to predict whether a customer will churn (i.e., leave the service) based on various features from the Telco dataset. The project covers the entire ML pipeline from data preprocessing to deployment through a user-friendly web application.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#-license)  
+[![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-ff4b4b?logo=streamlit)](https://streamlit.io)
+
+A complete machine learning pipeline to predict customer churn in the telecom industry using data-driven techniques. The project includes data preprocessing, model training, performance evaluation, feature interpretation, and deployment via an interactive web application.
+
+---
+
+## 🎬 Demo
+
+Watch a 2-minute walkthrough of the project in action:  
+[![Telco Churn Prediction Demo](https://img.youtube.com/vi/2VUMmAisBwk/0.jpg)](https://youtu.be/2VUMmAisBwk)
+
+> 📌 *Click the thumbnail or [this link](https://youtu.be/2VUMmAisBwk) to watch the demo.*
 
 ---
 
 ## 🎯 Objective
 
-To build a predictive system that can help telecom companies identify customers likely to churn and take proactive measures to retain them, thus minimizing revenue loss.
+To help telecom companies identify potential churners so they can take proactive measures for customer retention and minimize revenue loss. The system predicts churn probability based on account information and service usage.
 
 ---
 
 ## 🧠 Models Used
 
-We trained and evaluated three machine learning models to find the best-performing one:
+- ✅ **Logistic Regression** – Interpretable and easy to deploy  
+- ✅ **Random Forest** – Handles non-linearity and feature interactions well  
+- ✅ **XGBoost** – Powerful gradient boosting algorithm for high accuracy  
 
-- ✅ **Logistic Regression** – Simple and interpretable
-- ✅ **Random Forest** – Robust and handles feature interactions well
-- ✅ **XGBoost** – High performance with gradient boosting
+> 🟢 **Random Forest is used in the live prediction interface** because it achieved the highest recall, helping to identify more churn-prone customers.
 
-Each model was evaluated using standard metrics and tested with a custom threshold for improved recall on churn cases.
-
----
-
-## 📊 Features of the Project
-
-- 🔍 **Interactive Exploratory Data Analysis (EDA)**  
-  Dynamic visualizations like histograms, pie charts, violin plots, and comparisons by churn status.
-
-- ⚖️ **Model Comparison Page**  
-  Compare different models using Accuracy, Precision, Recall, F1-Score, and AUC-ROC with performance tables.
-
-- 🧠 **Feature Importance with SHAP**  
-  Understand which features most influence customer churn with SHAP plots.
-
-- 🤖 **Live Prediction Interface**  
-  A form-based interface lets users input new customer details and get churn predictions instantly.
-
-- 🎯 **Custom Thresholding**  
-  Set a lower threshold (e.g., 0.3) to capture more churn cases and simulate profit-aware decision-making.
+Custom thresholding (set to 0.3) was applied to improve recall and identify more potential churn cases.
 
 ---
 
-## 🧰 Tools & Libraries Used
+## 📊 Key Features
 
-- **Languages**: Python  
-- **ML Libraries**: scikit-learn, XGBoost  
-- **Visualization**: Matplotlib, Seaborn, SHAP  
-- **Web App**: Streamlit  
-- **Other**: NumPy, Pandas, OpenCV, Pillow
+- 🔍 **Interactive EDA** with histograms, pie charts, violin plots, and comparison by churn  
+- ⚖️ **Model Evaluation** using Accuracy, Precision, Recall, F1-Score, and AUC-ROC  
+- 🧠 **SHAP Feature Importance** for explainability  
+- 🤖 **Live Prediction Interface** using user inputs  
+- 🎯 **Custom Thresholding** to prioritize churn capture for profit-driven strategy  
 
 ---
 
-## 🚀 How to Run
+## 🧰 Tech Stack
 
-Follow these steps to run the project locally:
+| Category         | Tools & Libraries                                     |
+|------------------|--------------------------------------------------------|
+| **Language**     | Python                                                 |
+| **ML Libraries** | scikit-learn, XGBoost                                  |
+| **EDA & Plots**  | Pandas, Seaborn, Matplotlib, SHAP                      |
+| **Web App**      | Streamlit                                              |
+| **Other**        | NumPy, OpenCV, Pillow                                  |
+
+---
+
+## 🚀 How to Run Locally
 
 ```bash
-# Step 1: Clone the repository
+# 1. Clone the repository
 git clone https://github.com/AmnaaYaseen/telco-customer-churn-prediction.git
 
-# Step 2: Navigate to the root project directory
+# 2. Navigate to the project folder
 cd telco_customer_churn_prediction
 
-# Step 3 (Optional but recommended): Create a virtual environment
+# 3. (Optional) Create a virtual environment
 python -m venv .venv
-.venv\Scripts\activate  # For Windows users
+.venv\Scripts\activate  # For Windows
 
-# Step 4: Install all required dependencies
+# 4. Install the required dependencies
 pip install -r requirements.txt
 
-# Step 5: Run the Streamlit app
+# 5. Launch the Streamlit application
 cd churn_app
 streamlit run app.py
+```
+
+---
+
+## 📁 Project Structure
+
+```
+<pre>
+├── churn_app/
+│   ├── app_pages/
+│   │   ├── about.py
+│   │   ├── eda_app.py
+│   │   ├── home.py
+│   │   ├── live_prediction.py
+│   │   └── model_comparison.py
+│   ├── assets/
+│   │   ├── bg.png
+│   │   ├── image1.png
+│   │   └── styles.css
+│   ├── data/
+│   │   ├── cv_scores.csv
+│   │   ├── WA_Fn-UseC_-Telco-Customer-Churn.csv
+│   │   ├── X_test.csv
+│   │   ├── X_test_top.csv
+│   │   ├── y_test.csv
+│   │   └── y_test_top.csv
+│   ├── models/
+│   │   ├── columns.pkl
+│   │   ├── logistic.pkl
+│   │   ├── rf.pkl
+│   │   └── xgb.pkl
+│   ├── models_train_all_features/
+│   │   ├── columns.pkl
+│   │   ├── logistic.pkl
+│   │   ├── rf.pkl
+│   │   └── xgb.pkl
+│   ├── app.py
+│   ├── retrain_top_features.py
+│   ├── train_all_features.ipynb
+│   └── utils.py
+├── requirements.txt
+├── README.md
+├── Project Proposal.pdf
+├── .gitignore
+└── LICENSE
+</pre>
+
+
+```
+
+---
+
+## 👩‍💻 Developer
+
+**Amna Yaseen**  
+[GitHub](https://github.com/AmnaaYaseen) • [LinkedIn](https://linkedin.com/in/amnayaseen)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute it with proper credit.  
+
+© 2025 Amna Yaseen. All rights reserved.
