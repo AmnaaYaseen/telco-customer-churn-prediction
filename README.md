@@ -131,7 +131,7 @@ streamlit run app.py
 ## 👩‍💻 Developer
 
 **Amna Yaseen**  
-[GitHub](https://github.com/AmnaaYaseen) • [LinkedIn](https://linkedin.com/in/amnayaseen)
+[GitHub](https://github.com/AmnaaYaseen) • [LinkedIn](https://linkedin.com/in/amnaa-yaseen)
 
 ---
 
